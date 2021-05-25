@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>EXCEL Clone</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+	</head>
+	<body>
+		<div class="main_container">
+			<div class="icon_container">
+				<img
+					src="xls-icon-3392.png"
+					width="50"
+					height="50"
+				/>
+			</div>
+			<div class="nos_and_menu_container">
+				<div class="nos-container">
+					<input
+						type="file"
+						class="inputButton"
+						id="inputButton"
+						accept=".json"
+						style="display: none"
+					/>
+					<div class="new" style="cursor: pointer">New</div>
+					<div
+						class="open"
+						style="cursor: pointer"
+						onclick="myOpenFunction()"
+					>
+						Open
+					</div>
+					<div class="download" style="cursor: pointer">Save</div>
+				</div>
+				<div class="menu-container">
+					<div class="font-container">
+						<select
+							id="font-family"
+							class="font-family"
+							style="cursor: pointer"
+						>
+						<option style="--font:Arial" value="Arial">Arial</option>
+						<option style="--font:Calibri" value="Calibri">Calibri</option>
+						<option style="--font:Cambria" value="Cambria">Cambria</option>
+						<option style="--font:Comic Sans MS" value="Comic Sans MS">Comic Sans MS</option>
+						<option style="--font:Courier New" value="Courier New">Courier New</option>
+						<option style="--font:fantasy" value="fantasy">fantasy</option>
+						<option style="--font:Georgia" value="Georgia">Georgia</option>
+						<option style="--font:monospace" value="monospace">monospace</option>
+						<option style="--font:sans-serif" value="sans-serif">sans-serif</option>
+						</select>
+					</div>
+					<div class="fontSize-container">
+						<select id="font-size" class="font-size">
+							<option value="8">8</option>
+							<option value="10">10</option>
+							<option value="12">12</option>
+							<option value="16">16</option>
+							<option value="20">20</option>
+							<option value="32">32</option>
+						</select>
+					</div>
+					<div class="BUIC-container">
+						<div class="BUI_container">
+							<div class="bold" style="cursor: pointer">
+								<i class="fas fa-bold"></i>
+							</div>
+
+							<div class="underline" style="cursor: pointer">
+								<i class="fas fa-underline"></i>
+							</div>
+
+							<div class="italic" style="cursor: pointer">
+								<i class="fas fa-italic"></i>
+							</div>
+						</div>
+						<div class="color-container">
+							<input
+								type="color"
+								style="display: none"
+								id="fontColorButton"
+								class="color"
+								title="Change Font Color"
+							/>
+							<label
+								class="color"
+								id = "hoverOnFontColorBtn"
+								style="cursor: pointer"
+								for="fontColorButton"
+							>
+								<i class="fas fa-font"></i>
+							</label>
+
+							<input
+								type="color"
+								style="display: none"
+								id="bgColorButton"
+								class="bg-color"
+								title="Change bg Color"
+							/>
+							<label
+								class="bg-color"
+								id="hoverOnCellColorBtn"
+								style="cursor: pointer"
+								for="bgColorButton"
+							>
+								<i class="fas fa-fill-drip"></i>
+							</label>
+						</div>
+					</div>
+					<div class="alignment-container">
+						<div class="left" style="cursor: pointer">
+							<i class="fas fa-align-left"></i>
+						</div>
+
+						<div class="center" style="cursor: pointer">
+							<i class="fas fa-align-center"></i>
+						</div>
+
+						<div class="right" style="cursor: pointer">
+							<i class="fas fa-align-right"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="formula-container">
+			<input type="text" class="address-box" readonly />
+			<div class="seperator">
+				<img src="fx.png" height="20" width="20" class="fx" />
+			</div>
+			<input type="text" class="formula-box" />
+		</div>
+		<div class="grid_container">
+			<div class="top-left-block"></div>
+			<div class="top-row"></div>
+			<div class="left-col"></div>
+			<div class="grid"></div>
+		</div>
+		<div class="sheets">
+			<div class="add-sheet_container" style="cursor: pointer">
+				<i class="fas fa-plus icon"></i>
+			</div>
+
+			<div class="sheets-list">
+				<div
+					class="sheet active-sheet"
+					sheetIdx="1"
+					style="cursor: pointer"
+				>
+					Sheet 1
+				</div>
+			</div>
+		</div>
+
+		<script src="./init.js"></script>
+		<script src="./script.js"></script>
+		<script src="./formula.js"></script>
+		<script src="./newOpenSave.js"></script>
+
+		<script>
+			function myOpenFunction() {
+				document.getElementById("inputButton").click();
+			}
+		</script>
+	</body>
+</html>
