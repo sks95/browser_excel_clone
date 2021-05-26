@@ -1,30 +1,27 @@
 # 📊 Excel Clone
 
-**# Description:**
+## Description :
 
-**### Excel Clone is built using HTML5 CSS3 and JavaScript.**
+### **Excel Clone is built using HTML5, CSS3 and JavaScript. It runs in a browser window.**
 
-**###** 📚  **Features of the project :**
+### 📚  **Features of the project :**
 
 - Change Cell size
+- Cycle Detection(if any)
+- Evaluate Formula using Stack;
+- New, Open, Save functionality
 - Formatting - font, size, bold, italic, underline, color, background color, position.
 - Adding Multiple sheets
-- New, Open, Save functionality
-- Cycle Detection(if any)
-- Evaluate Formula using Stack
 - Scrolling with fixed top-row and side column
 
-**# 🚀  Techstack:**
+## **🚀  Techstack :**
 
-**### Frontend:**
+### Frontend :
 
 - Programming Language: JavaScript
 - IDE: VSCode
 
-### 
-
-**###** 📸  **Screenshots**
-
+## 📸  **Screenshots**
 ---
 
 > Excel User Interface first glance
