@@ -18,7 +18,10 @@
 
 ### Frontend :
 
-- Programming Language: JavaScript
+- JavaScript
+- HTML5
+- CSS3
+- DOM
 - IDE: VSCode
 
 ## 📸  **Screenshots**
